@@ -2,23 +2,24 @@
 
 **Integrantes:** <Julieta Ferro> · <Sophia Ferreyra>
 **IA declarada:** <Chat GPT>
-**Pista:** <Agente>
+**Pista:** <Reglas>
 **Publicación en LinkedIn:** <link>
 
 ---
 
 ## 1. Formulación y PEAS
 
-**La pregunta.** <Para cada caso, ¿…? SÍ significa: …>
+**La pregunta.** <Para cada caso, ¿La IA debe bajar la dificultad del jefe final? SÍ significa: que el jugador abandonaría el juego si no se reduce la dificultad>
 
 | PEAS | Su sistema |
 |---|---|
-| Medida de rendimiento | <cómo se sabe si decidió bien> |
-| Entorno | <dónde y con qué decide> |
-| Actuadores | <qué hace con la decisión> |
-| Sensores | <qué datos recibe> |
+| Medida de rendimiento | <Porcentaje de jugadores que derrotan al jefe final> |
+| Entorno | <Videojuego, jugador y jefe final> |
+| Actuadores | <Reducir la dificultad o mantenarla> |
+| Sensores | <Muertes seguidas, vida restante del jefe en el mejor intento, horas jugadas y porcentaje global de jugadores que derrotan al jefe> |
 
-**Objetivo y métrica.** <Qué es lo que de verdad importa en su problema y con qué métrica lo van a medir. ¿Son lo mismo?>
+**Objetivo y métrica.** <El objetivo es aumentar la cantidad de jugadores que consiguen derrotar al jefe final, evitando reducir la dificultad innecesariamente. La métrica principal es el porcentaje de jugadores que derrotan al jefe. Es importante distinguirlo de la exactitud del sistema: que prediga correctamente quién abandonaría no garantiza, por sí solo, que todos esos jugadores consigan derrotar al jefe. 
+No son lo mismo.
 
 ## 2. El sistema
 
