@@ -2,7 +2,7 @@
 
 **Integrantes:** <Julieta Ferro> · <Sophia Ferreyra>
 **IA declarada:** <Chat GPT>
-**Pista:** <Reglas>
+**Pista:** <Agente>
 **Publicación en LinkedIn:** <link>
 
 ---
@@ -88,6 +88,7 @@ No son lo mismo.
 |---|---|---|---|
 | 1 | <Redactar el PEAS> | <La redacción de medida de rendimiento, entorno, actuadores y sensores> | <El objetivo y lamétrica eran incorrectos> |
 | 2 | <Ayuda con el sistema> | <El código y como agregar un archivo al código> | <El primer código daba los resultados contrarios y el código no funcionaba correctamente con los archivos> |
+| 3 | <Ayuda con el sistema> | <El código y como agregar un archivo al código> | <Cambiamos de pista debido a que no se llegaba a ningún lado> |
 
 **Corridas contra el evaluador**
 
