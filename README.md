@@ -27,7 +27,7 @@ No son lo mismo.
 
 **Variables que usa y por qué.** <Muertes seguidas, vida que le dejó al jefe y horas jugadas, Jugadores que derrotan al jefe (%global), Que otros hayan derrotado o no al jefe no determina que un jugador deje de jugar.>
 
-**Cómo se corre en vivo.** <Pasos concretos para resolver un caso nuevo: [link al Colab, a la planilla o la cuenta a mano](https://colab.research.google.com/drive/1FHhbe5NdpQprvFhMENCLy6Obj2Nt_mSf?usp=sharing).>
+**Cómo se corre en vivo.** <Pasos concretos para resolver un caso nuevo: https://colab.research.google.com/drive/1-uKCjGUGF-l20QUA18xPZvdblekeZhD0?usp=sharing>
 
 **Dos casos de ejemplo.**
 
