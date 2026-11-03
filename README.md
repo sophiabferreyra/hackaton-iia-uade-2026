@@ -18,23 +18,23 @@
 | Actuadores | <Reducir la dificultad o mantenarla> |
 | Sensores | <Muertes seguidas, vida restante del jefe en el mejor intento, horas jugadas y porcentaje global de jugadores que derrotan al jefe> |
 
-**Objetivo y métrica.** <El objetivo es aumentar la cantidad de jugadores que consiguen derrotar al jefe final, evitando reducir la dificultad innecesariamente. La métrica principal es el porcentaje de jugadores que derrotan al jefe. Es importante distinguirlo de la exactitud del sistema: que prediga correctamente quién abandonaría no garantiza, por sí solo, que todos esos jugadores consigan derrotar al jefe. 
+**Objetivo y métrica.** <El objetivo es aumentar la cantidad de jugadores que consiguen derrotar al jefe final, evitando reducir la dificultad innecesariamente. La métrica principal es el porcentaje de jugadores que derrotan al jefe.
 No son lo mismo.
 
 ## 2. El sistema
 
-**Cómo decide.** <Neurona: pesos y sesgo. Reglas: la lista de reglas si‑entonces. Agente: la regla con la que elige la acción.>
+**Cómo decide.** <Reglas: la lista de reglas si‑entonces.>
 
-**Variables que usa y por qué.** <Cuáles usa, cuáles descarta y por qué.>
+**Variables que usa y por qué.** <Muertes seguidas, vida que le dejó al jefe y horas jugadas, Jugadores que derrotan al jefe (%global), Que otros hayan derrotado o no al jefe no determina que un jugador deje de jugar.>
 
-**Cómo se corre en vivo.** <Pasos concretos para resolver un caso nuevo: link al Colab, a la planilla o la cuenta a mano.>
+**Cómo se corre en vivo.** <Pasos concretos para resolver un caso nuevo: [link al Colab, a la planilla o la cuenta a mano](https://colab.research.google.com/drive/1FHhbe5NdpQprvFhMENCLy6Obj2Nt_mSf?usp=sharing).>
 
 **Dos casos de ejemplo.**
 
 | Caso inventado | Valores | Salida del sistema |
 |---|---|---|
-| A | <…> | <SÍ/NO> |
-| B | <…> | <SÍ/NO> |
+| A | <5> | <20> | <40> | <NO> |
+| B | <76> | <45> | <84> | <SÍ> |
 
 ## 3. Medición
 
@@ -86,7 +86,7 @@ No son lo mismo.
 
 | # | Qué le pedimos | Qué aceptamos | Qué rechazamos y por qué |
 |---|---|---|---|
-| 1 | <> | <> | <> |
+| 1 | <Redactar el PEAS> | <La redacción de medida de rendimiento, entorno, actuadores y sensores> | <El objetivo y lamétrica eran incorrectos> |
 
 **Corridas contra el evaluador**
 
