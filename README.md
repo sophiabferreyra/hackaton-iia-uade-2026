@@ -23,7 +23,7 @@ No son lo mismo.
 
 ## 2. El sistema
 
-**Cómo decide.** <Reglas: la lista de reglas si‑entonces.>
+**Cómo decide.** <Agente: la regla con la que elige la acción.>
 
 **Variables que usa y por qué.** <Muertes seguidas, vida que le dejó al jefe y horas jugadas, Jugadores que derrotan al jefe (%global), Que otros hayan derrotado o no al jefe no determina que un jugador deje de jugar.>
 
@@ -42,24 +42,24 @@ No son lo mismo.
 
 | | Predice SÍ | Predice NO |
 |---|---|---|
-| **Real SÍ** | VP = <> | FN = <> |
-| **Real NO** | FP = <> | VN = <> |
+| **Real SÍ** | VP = <7> | FN = <0> |
+| **Real NO** | FP = <0> | VN = <7> |
 
 **Prueba (casos 15–20)**
 
 | | Predice SÍ | Predice NO |
 |---|---|---|
-| **Real SÍ** | VP = <> | FN = <> |
-| **Real NO** | FP = <> | VN = <> |
+| **Real SÍ** | VP = <2> | FN = <2> |
+| **Real NO** | FP = <0> | VN = <2> |
 
 | Métrica | Entrenamiento | Prueba |
 |---|---|---|
-| Exactitud | <> | <> |
-| Precisión | <> | <> |
-| Sensibilidad | <> | <> |
-| Especificidad | <> | <> |
+| Exactitud | <100%> | <66.67%> |
+| Precisión | <100%> | <100%> |
+| Sensibilidad | <100%> | <50%> |
+| Especificidad | <100%> | <100%> |
 
-**Entrenamiento contra prueba.** <¿Hay diferencia? ¿Por qué? ¿Sobreajuste o generalización?>
+**Entrenamiento contra prueba.** <Sí, existe una diferencia debido a la naturaleza de los datos. En el entrenamiento el agente alcanza un 100% de exactitud porque optimizó sus reglas basándose en esos casos específicos. Sin embargo, en la prueba (datos nuevos), la exactitud desciende a 66.67%. Esto evidencia un leve sobreajuste (overfitting), ya que el modelo se acopló tanto al conjunto de entrenamiento que le cuesta generalizar perfectamente ante escenarios totalmente nuevos>
 
 ## 4. El error más caro
 
