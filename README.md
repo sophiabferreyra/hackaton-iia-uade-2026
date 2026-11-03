@@ -63,7 +63,7 @@ No son lo mismo.
 
 ## 4. El error más caro
 
-<¿Es peor el falso positivo o el falso negativo en su problema? ¿Por qué, según la ficha? ¿Qué cambiaron en el sistema para cometer menos ese error?>
+<En nuestro problema el falso negativo es el peor debido a que lleva a que no se reduzca la dificultad y el jugador se frustre más.  Porque el objetivo de la problemática es evitar que el usuario se vaya (SÍ = el jugador abandona). Dejar ir a un jugador por no asistirlo a tiempo (falso negativo) arruina por completo la retención.  Se puede ajustar el umbral de decisión (threshold) bajándolo (por ejemplo, de 0.5 a 0.35) para que el agente sea más sensible y prefiera bajar la dificultad ante cualquier indicio de abandono, o bien incorporar nuevas variables dinámicas de frustración en tiempo real.>
 
 ## 5. ¿Comparado contra qué?
 
@@ -86,9 +86,10 @@ No son lo mismo.
 
 | # | Qué le pedimos | Qué aceptamos | Qué rechazamos y por qué |
 |---|---|---|---|
-| 1 | <Redactar el PEAS> | <La redacción de medida de rendimiento, entorno, actuadores y sensores> | <El objetivo y lamétrica eran incorrectos> |
+| 1 | <Redactar el PEAS> | <La redacción de medida de rendimiento, entorno, actuadores y sensores> | <El objetivo y la métrica eran incorrectos> |
 | 2 | <Ayuda con el sistema> | <El código y como agregar un archivo al código> | <El primer código daba los resultados contrarios y el código no funcionaba correctamente con los archivos> |
 | 3 | <Ayuda con el sistema> | <El código y como agregar un archivo al código> | <Cambiamos de pista debido a que no se llegaba a ningún lado> |
+| 4 | <El error más caro> | <Como mejorar el código> | <Nada> |
 
 **Corridas contra el evaluador**
 
