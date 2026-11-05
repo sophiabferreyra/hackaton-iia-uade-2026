@@ -65,7 +65,8 @@ No son lo mismo, el objetivo indica qué queremos que logre el agente; la métri
 
 ## 4. El error más caro
 
-<>
+<El falso negativo es peor, porque significa que el NPC decide NO CURAR cuando el jugador realmente necesita ayuda. Como consecuencia, el jugador puede morir, perder su progreso y perjudicar la experiencia de juego. En cambio, un falso positivo solamente implica gastar una poción innecesariamente. 
+Aumentamos el costo del falso negativo de 10 a 20, manteniendo el falso positivo en 2. Esto redujo el umbral de decisión de 0,1667 a 0,09. De esta manera, el NPC necesita una menor probabilidad estimada para decidir curar al jugador, priorizando su supervivencia por encima del ahorro de pociones.>
 
 ## 5. ¿Comparado contra qué?
 
