@@ -13,28 +13,28 @@
 
 | PEAS | Su sistema |
 |---|---|
-| Medida de rendimiento | <Porcentaje de jugadores que derrotan al jefe final> |
-| Entorno | <Videojuego, jugador y jefe final> |
-| Actuadores | <Reducir la dificultad o mantenarla> |
-| Sensores | <Muertes seguidas, vida restante del jefe en el mejor intento, horas jugadas y porcentaje global de jugadores que derrotan al jefe> |
+| Medida de rendimiento | <Mantener vivo al jugador, evitar el gasto innecesario de pociones y reducir las decisiones incorrectas> |
+| Entorno | <Videojuego cooperativo, situaciones de combate, jugador, NPC aliado, enemigos y recursos disponibles> |
+| Actuadores | <Usar una poción para curar al jugador o decidir no utilizarla> |
+| Sensores | <Nivel de vida del jugador, daño recibido, cantidad de enemigos, intensidad del combate, pociones disponibles y riesgo de muerte> |
 
-**Objetivo y métrica.** <El objetivo es aumentar la cantidad de jugadores que consiguen derrotar al jefe final, evitando reducir la dificultad innecesariamente. La métrica principal es el porcentaje de jugadores que derrotan al jefe.
-No son lo mismo.
+**Objetivo y métrica.** <Lograr que el NPC tome decisiones correctas sobre cuándo curar al jugador, priorizando su supervivencia y evitando gastar pociones cuando no sea necesario. Evaluar qué tan bien decide el NPC teniendo en cuenta los dos tipos de errores:
+falsos positivos: penalizar el uso innecesario de pociones, y falsos negativos: penalizar con mayor gravedad las decisiones que provocan la muerte del jugador. La métrica debe priorizar la supervivencia del jugador por encima del ahorro de recursos. No son lo mismo, el objetivo indica qué queremos que logre el agente; la métrica establece cómo vamos a medir si lo está logrando. En este caso, no alcanza con contar decisiones correctas: también hay que considerar la gravedad de cada error.>
 
 ## 2. El sistema
 
 **Cómo decide.** <Agente: la regla con la que elige la acción.>
 
-**Variables que usa y por qué.** <Muertes seguidas, vida que le dejó al jefe y horas jugadas, Jugadores que derrotan al jefe (%global), Que otros hayan derrotado o no al jefe no determina que un jugador deje de jugar.>
+**Variables que usa y por qué.** <>
 
-**Cómo se corre en vivo.** <Pasos concretos para resolver un caso nuevo: https://colab.research.google.com/drive/1-uKCjGUGF-l20QUA18xPZvdblekeZhD0?usp=sharing>
+**Cómo se corre en vivo.** <>
 
 **Dos casos de ejemplo.**
 
 | Caso inventado | Valores | Salida del sistema |
 |---|---|---|
-| A | <5> | <20> | <40> | <NO> |
-| B | <76> | <45> | <84> | <SÍ> |
+| A | <> | <> | <> | <SÍ/NO> |
+| B | <> | <> | <> | <SÍ/NO> |
 
 ## 3. Medición
 
@@ -42,28 +42,28 @@ No son lo mismo.
 
 | | Predice SÍ | Predice NO |
 |---|---|---|
-| **Real SÍ** | VP = <7> | FN = <0> |
-| **Real NO** | FP = <0> | VN = <7> |
+| **Real SÍ** | VP = <> | FN = <> |
+| **Real NO** | FP = <> | VN = <> |
 
 **Prueba (casos 15–20)**
 
 | | Predice SÍ | Predice NO |
 |---|---|---|
-| **Real SÍ** | VP = <2> | FN = <2> |
-| **Real NO** | FP = <0> | VN = <2> |
+| **Real SÍ** | VP = <> | FN = <> |
+| **Real NO** | FP = <> | VN = <> |
 
 | Métrica | Entrenamiento | Prueba |
 |---|---|---|
-| Exactitud | <100%> | <66.67%> |
-| Precisión | <100%> | <100%> |
-| Sensibilidad | <100%> | <50%> |
-| Especificidad | <100%> | <100%> |
+| Exactitud | <> | <> |
+| Precisión | <> | <> |
+| Sensibilidad | <> | <> |
+| Especificidad | <> | <> |
 
-**Entrenamiento contra prueba.** <Sí, existe una diferencia debido a la naturaleza de los datos. En el entrenamiento el agente alcanza un 100% de exactitud porque optimizó sus reglas basándose en esos casos específicos. Sin embargo, en la prueba (datos nuevos), la exactitud desciende a 66.67%. Esto evidencia un leve sobreajuste (overfitting), ya que el modelo se acopló tanto al conjunto de entrenamiento que le cuesta generalizar perfectamente ante escenarios totalmente nuevos>
+**Entrenamiento contra prueba.** <>
 
 ## 4. El error más caro
 
-<En nuestro problema el falso negativo es el peor debido a que lleva a que no se reduzca la dificultad y el jugador se frustre más.  Porque el objetivo de la problemática es evitar que el usuario se vaya (SÍ = el jugador abandona). Dejar ir a un jugador por no asistirlo a tiempo (falso negativo) arruina por completo la retención.  Se puede ajustar el umbral de decisión (threshold) bajándolo (por ejemplo, de 0.5 a 0.35) para que el agente sea más sensible y prefiera bajar la dificultad ante cualquier indicio de abandono, o bien incorporar nuevas variables dinámicas de frustración en tiempo real.>
+<>
 
 ## 5. ¿Comparado contra qué?
 
@@ -86,11 +86,10 @@ No son lo mismo.
 
 | # | Qué le pedimos | Qué aceptamos | Qué rechazamos y por qué |
 |---|---|---|---|
-| 1 | <Redactar el PEAS> | <La redacción de medida de rendimiento, entorno, actuadores y sensores> | <El objetivo y la métrica eran incorrectos> |
-| 2 | <Ayuda con el sistema> | <El código y como agregar un archivo al código> | <El primer código daba los resultados contrarios y el código no funcionaba correctamente con los archivos> |
-| 3 | <Ayuda con el sistema> | <El código y como agregar un archivo al código> | <Cambiamos de pista debido a que no se llegaba a ningún lado> |
-| 4 | <El error más caro> | <Como mejorar el código> | <Nada> |
-
+| 1 | <Verificar PEAS> | <Algunas adiciones al PEAS> | <Nada, buscabamos saber si le parecia correcto> |
+| 2 | <> | <> | <> |
+| 3 | <> | <> | <> |
+| 4 | <> | <> | <> |
 **Corridas contra el evaluador**
 
 | Corrida | Nota | Agujero que encontró | Qué cambiamos |
