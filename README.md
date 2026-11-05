@@ -93,7 +93,8 @@ Aumentamos el costo del falso negativo de 10 a 20, manteniendo el falso positivo
 | 2 | <Sistema: ¿Agente o reglas?> | <Agente> | <Reglas. Porque si la regla es muy rígida, puede cometer errores graves. Por otro lado, el agente maneja mucho mejor los escenarios de riesgo y los costos de los errores> |
 | 3 | <Código> | <Código> | <La primera versión del código debido a que falaba los casos del entrenamiento> |
 | 4 | <Sobreajuste o generalización> | <Respuesta> | <Nada> |
-| 5 | <> | <> | <> |
+| 5 | <Reducción de FN> | <El cambio en el umbral> | <La madificación del árbol de decisión debido a que no habia cambios> |
+| 6 | <> | <> | <> |
 **Corridas contra el evaluador**
 
 | Corrida | Nota | Agujero que encontró | Qué cambiamos |
