@@ -1,4 +1,4 @@
-# <T19> · <¿Bajamos la dificultad de este jefe?>
+# <T21> · <¿El NPC aliado cura al jugador ahora?>
 
 **Integrantes:** <Julieta Ferro> · <Sophia Ferreyra>
 **IA declarada:** <Chat GPT>
@@ -9,7 +9,7 @@
 
 ## 1. Formulación y PEAS
 
-**La pregunta.** <Para cada caso, ¿La IA debe bajar la dificultad del jefe final? SÍ significa: que el jugador abandonaría el juego si no se reduce la dificultad>
+**La pregunta.** <Para cada caso, ¿La IA debe usar una poción para curar al jugador? SÍ = si no lo cura ahora, el jugador muere en los próximos segundos.>
 
 | PEAS | Su sistema |
 |---|---|
