@@ -83,7 +83,7 @@ En comparación con nuestro modelo, nuestro sistema basado en árbol de decision
 
 ## 6. Riesgo: el camino completo
 
-<Datos → modelo → decisión → consecuencia aplicado a su caso. Al menos un riesgo concreto.>
+<El NPC recibe información sobre la vida del jugador, la cantidad de enemigos y las pociones disponibles. → El árbol de decisión analiza esos datos y estima la probabilidad de que el jugador necesite curación. → Según la probabilidad estimada y el umbral establecido, el NPC decide si utiliza una poción o no. → Si decide correctamente, puede salvar al jugador o conservar recursos. Si se equivoca, puede gastar una poción innecesariamente o dejar morir al jugador. Si los datos de entrada son incorrectos o incompletos, el modelo puede estimar mal la situación y tomar una decisión equivocada. Por ejemplo, si no detecta que el jugador está recibiendo mucho daño, puede decidir NO CURAR y provocar su muerte, causando que el jugador pierda su progreso.>
 
 ## 7. Bitácora
 
