@@ -70,14 +70,16 @@ Aumentamos el costo del falso negativo de 10 a 20, manteniendo el falso positivo
 
 ## 5. ¿Comparado contra qué?
 
-**Línea base trivial.** <Qué resultado saca un sistema que responde siempre lo mismo, y cómo se compara el suyo.>
+**Línea base trivial.** <Como línea base trivial, evaluamos un sistema que responde siempre SÍ: decide curar al jugador en el 100% de los casos sin importar el estado del combate.
+Resultado de la línea base: En el conjunto de entrenamiento (14 casos), este sistema trivial acierta en los 9 casos donde realmente habías que curar, pero comete 5 Falsos Positivos (gasta pociones innecesariamente cuando la vida del jugador era alta y no había peligro). Su exactitud es del 64% con una sensibilidad de 1.0.
+En comparación con nuestro modelo, nuestro sistema basado en árbol de decisiones con umbral de costos logra mejorar la exactitud de entrenamiento al 86% y reduce los Falsos Positivos a solo 2, manteniendo intacta la sensibilidad perfecta de 1.0. Es decir, nuestro modelo es mucho más eficiente gestionando las pociones que la regla trivial de curar siempre, sin sacrificar la vida del jugador.>
 
 | Checklist (Clase 6) | Respuesta |
 |---|---|
-| ¿Qué datos? | <> |
-| ¿Qué métrica? | <> |
-| ¿Comparado contra qué? | <> |
-| ¿Quién lo midió? | <> |
+| ¿Qué datos? | <20 casos tabulados en T21.csv (14 de entrenamiento y 6 de prueba) con variables de vida del jugador, cantidad de enemigos y pociones restantes, sin datos de personas reales> |
+| ¿Qué métrica? | <Exactitud, Precisión, Sensibilidad y Especificidad, calculadas rigurosamente a partir de la matriz de confusión para evaluar el impacto de los errores (Falsos Positivos vs. Falsos Negativos)> |
+| ¿Comparado contra qué? | <Contra una línea base trivial que responde siempre SÍ (curar siempre), demostrando que nuestro modelo optimiza el uso de recursos sin perder sensibilidad ante el riesgo crítico de muerte del jugador.> |
+| ¿Quién lo midió? | <El equipo de trabajo de forma automatizada mediante el script de Python en Google Colab> |
 
 ## 6. Riesgo: el camino completo
 
