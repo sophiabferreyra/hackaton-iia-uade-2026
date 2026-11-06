@@ -3,7 +3,7 @@
 **Integrantes:** <Julieta Ferro> · <Sophia Ferreyra>
 **IA declarada:** <Chat GPT>
 **Pista:** <Agente>
-**Publicación en LinkedIn:** <link>
+**Publicación en LinkedIn:** <https://www.linkedin.com/feed/update/urn:li:activity:7524463547028860928/>
 
 ---
 
@@ -101,4 +101,4 @@ En comparación con nuestro modelo, nuestro sistema basado en árbol de decision
 
 | Corrida | Nota | Agujero que encontró | Qué cambiamos |
 |---|---|---|---|
-| 1 | <> | <> | <> |
+| 1 | <8> | <Agujero principal: En la sección 2, ¿cómo decide su sistema? Si alguien no abre el Colab, ¿puede saber qué preguntas hace el árbol, en qué orden y con qué umbral elige curar? Otros: ¿Qué matriz tenían antes de bajar el umbral de 0,1667 a 0,09? ¿Algún caso pasó de NO a SÍ? · Sus sensores incluyen daño recibido, intensidad del combate y riesgo de muerte: ¿en qué columna de la ficha están?> | <Nada> |
